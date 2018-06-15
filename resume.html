@@ -2,10 +2,13 @@
 <html>
 <head>
 	<title>RSUME</title>
-	<link rel="stylesheet" type="text/css" href="css/style_1.css">
+	<link rel="stylesheet" type="text/css" href="style_1.css">
 </head>
 <body>
-	
+	<select onchange="chgStyle(this.value)">
+	    <option value="style_1" selected>蓝色风格</option>
+	    <option value="style_2">绿色风格</option>
+	</select>
 	<h1>简历</h1>
 	<div class="xx">
 		<div class="list" >		
@@ -45,5 +48,11 @@
 			<p>作为交互设计师参与了UI界面的设计</p>
 		</div>
 	</div>
+	<script type="text/javascript">
+		function chgStyle(v){
+			var v, links;
+		document.getElementsByTagName("link")["pagestyle"].href = "css/" + v + ".css";
+}
+	</script>
 </body>
 </html>
